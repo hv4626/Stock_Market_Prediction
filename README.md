@@ -1,2 +1,10 @@
 # Stock_Market_Prediction
 Summer Project under which for any data set we have to predict stock prices for Linear Regression, LSTM and ARIMA model
+
+Under the SoC'22, we have to make a Stock Market Predicction model on Machine Leraning starting with first taking the data provided (here, GOOGLE) and checking basic database after which performing an explanotroty data analysis on the training set by plotting various plots and coorelation, finally branching toward the three ML algorithms:-
+
+1) Linear Regression:For the target variable "Close", sepreated out train and test dataset using the train_test_split methon under sklearn and plotted the actual data with the prediction based on both test and train dataset using the LinearRegression library of sklean and calculated the rmse for score evaluation
+
+2) LSTM(Long Short Term Memory):Using the "close" variable as training data and and scaler "minmax", first converted the test, train data to a numpy array over which we created the LSTM model by adding 3 layers using Sequential() library of Keras and complied the model by using optimizer='adam', loss='mean_squared_error' and fit data into it using x_train,y_train ,epochs ,batch_size,verbose, Next thing was to load te test data and predict values acoordingly and calculated the rmse for score evaluation with prediction for next 10 days
+
+3) ARIMA: Starting with install pmdrima in your collab notebook and insertin the train data with the first thing to do here was doing the adfuller test in order to get the "p-value" for auto-regression, which we got here above 0.5, showing us that a potensial differencce of data is need which again was verified via the stepwise_fit auto_arima command where we found the model to be (1,1,0):(p,q,r), moving on to fitting the p,q,r to the model and plotting for predictions and calculated the rmse for score evaluation, Next thing was to load te test data and predict values acoordingly and calculated the rmse for score evaluation with prediction for next 10 days
